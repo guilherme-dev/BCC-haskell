@@ -48,3 +48,6 @@ sumEven (a:x) | a `mod` 2 == 0 = a + sumEven(x)
 sumAtEven :: [Int] -> Int
 sumAtEven (a:[]) = a
 sumAtEven (a:b:x) = a + b
+
+returnAscii :: Char -> (Char, Char, Int)
+returnAscii x = ((toEnum ((fromEnum x) - 32)), x, (fromEnum x))
